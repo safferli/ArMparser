@@ -116,33 +116,7 @@ print(result)
 
 #%%
 
-
-
-from pyparsing import Regex, oneOf
-
-THE_NAMES = \
-"""Joe
-bob
-Jimmy X
-grjiaer-rreaijgr Y
-"""
-
-THE_THINGS_THEY_DO = \
-"""Joe A
-bob B
-Jimmy X C
-Jimmy X X
-grjiaer-rreaijgr Y Y
-"""
-
-ACTION = Regex('.*')
-NAMES = THE_NAMES.splitlines()
-print(NAMES)
-GRAMMAR = oneOf(NAMES) + ACTION    
-for line in THE_THINGS_THEY_DO.splitlines():
-    print(GRAMMAR.parseString(line))
-    
-    
+   
     
 
 # integer = Word(nums).setParseAction(convertIntegers)
