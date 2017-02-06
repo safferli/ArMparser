@@ -35,7 +35,8 @@ with open("test.txt", "r") as file:
 # ease of use
 word = Word(alphas)
 words = OneOrMore(Word(alphas))#Word(alphas + " ")# OneOrMore(word)
-
+# http://stackoverflow.com/questions/26600333/pyparsing-whitespace-match-issues
+combWords = Combine(OneOrMore(Word(alphas) | White(' ',max=1) + ~White()))
 
 # ArM dictionaries
 # check pyparser.Dict
@@ -49,7 +50,8 @@ value = Combine(Optional(oneOf("+ -")) + Word(nums))
 score = Combine(Word(nums)+Optional(oneOf("+2 +3")))
 xp    = Optional(Suppress("(")+nums+Suppress(")"))
 
-ability        = words#Combine(words)
+# Combine requires the matching tokens to all be adjacent with no intervening whitespace
+ability        = combWords#Combine(words)
 specialisation = Literal("(")+Word(alphas)+Literal(")")
 #Optional(Combine(Literal("(")+words+Literal(")")))
 
@@ -92,7 +94,7 @@ abilities = Group(Suppress("Abilities: ")
 parser = (
     name 
     + characteristics
-    #+ abilities
+    + abilities
 )
 
 #result = parser.parseFile()

@@ -1,4 +1,3 @@
 Aurulentus at Gauntlet
 Characteristics: Int +2, Per 0, Pre +3, Com +2, Str 0, Sta +1, Dex 0, Qik -2
-Abilities: Artes Liberales 1, Testing 2, Tryout 2+2
-Abilities2: Artes Liberales 1 (astronomy), Testing 2 (speci), Tryout 2+2 (spec)
+Abilities: Artes Liberales 1, Testing 2, Tryout 2
