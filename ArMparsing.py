@@ -33,35 +33,29 @@ with open("test.txt", "r") as file:
 #%%
 
 # ease of use
-word = Word(alphas)
-words = OneOrMore(Word(alphas))#Word(alphas + " ")# OneOrMore(word)
+words     = OneOrMore(Word(alphas) | White(' ', max=1))
+abl_words = OneOrMore(Word(alphas+":") | White(' ', max=1))
 # http://stackoverflow.com/questions/26600333/pyparsing-whitespace-match-issues
-combWords = Combine(OneOrMore(Word(alphas) | White(' ', max=1) + ~White()))
 
 # ArM dictionaries
-# check pyparser.Dict
 characteristic = oneOf("Int Per Pre Com Str Sta Dex Qik Cun")
 technique      = oneOf("Cr In Mu Pe Re")
 form           = oneOf("An Au Aq Co He Ig Im Me Te Vi")
 
-#value = Word(nums+"+-")
-value = Combine(Optional(oneOf("+ -")) + Word(nums))
-# score+xp: e.g. "5(20)"
-score = Combine(Word(nums)+Optional(oneOf("+2 +3")))
-xp    = Optional(Suppress("(")+Word(nums)+Suppress(")"))
-
-
-# allow multi-word abilities, remove spaces which are before the score (end of ability name)
-# e.g.: "Artes Liberales 2" -> "['Artes Liberales', 2], not ['Artes Liberales ', 2]
-ability = Combine(OneOrMore(Word(alphas) | White(' ', max=1) + ~FollowedBy(Word(nums))))
-specialisation = Literal("(")+Word(alphas)+Literal(")")
-#Optional(Combine(Literal("(")+words+Literal(")")))
+# strip trailing whitespace from multiple-word-abilities ('Artes Liberales ')
+ability        = Combine(abl_words).setParseAction(lambda x: x[0].strip())
+# specialisations are in brackets
+specialisation = Combine(Literal("(") + words + Literal(")"))
+# Puissant Art/Ability adds potential +2/+3
+score          = Combine(Word(nums) + Optional(oneOf("+2 +3")))
+xp             = Optional(Combine(Literal("(") + Word(nums) + Literal(")")))
+value          = Combine(Optional(oneOf("+ -")) + Word(nums))
 
 # convert all to integer
 value.setParseAction(lambda t:int(t[0]))
 ## TODO: Puissant() cannot convert to Int
 #score.setParseAction(lambda t:int(t[0]))
-xp.setParseAction(lambda t:int(t[0]))
+#xp.setParseAction(lambda t:int(t[0]))
 
 # ArM parsing
 
@@ -72,16 +66,18 @@ xp.setParseAction(lambda t:int(t[0]))
 ## ArM magus format
 
 # first line
-name = StringStart()+restOfLine().setResultsName("Name") #OneOrMore(word)+LineEnd()
+name = StringStart() + restOfLine().setResultsName("Name")
 
 characteristics = Group(Suppress("Characteristics: ")
-                        +delimitedList(characteristic+value)
+                        + delimitedList(Group(characteristic + value))
             ).setResultsName("Characteristics")#("char")
 
 abilities = Group(Suppress("Abilities: ")
-                  #+delimitedList(ability+score+xp+specialisation)
-                  +delimitedList(ability+score+xp)
-            ).setResultsName("Abilities")
+                  + delimitedList(Group(ability
+                                        + score
+                                        + xp
+                                        + specialisation))
+                          ).setResultsName("Abilities")
 
 
 
@@ -91,21 +87,21 @@ abilities = Group(Suppress("Abilities: ")
 
 
 
-
 # all in one parser
-parser = (
-    name 
-    + characteristics
-    + abilities
+parser = (name 
+          + characteristics
+          + abilities
 )
 
-#result = parser.parseFile()
+
 
 
 with open("test.txt", "r") as file:
     aurulentus = file.read()
 
+#result = parser.parseFile()
 result = parser.parseString(aurulentus)
+
 print(result)
 #result["Abilities"]
 
