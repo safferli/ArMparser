@@ -36,7 +36,7 @@ with open("test.txt", "r") as file:
 word = Word(alphas)
 words = OneOrMore(Word(alphas))#Word(alphas + " ")# OneOrMore(word)
 # http://stackoverflow.com/questions/26600333/pyparsing-whitespace-match-issues
-combWords = Combine(OneOrMore(Word(alphas) | White(' ',max=1) + ~White()))
+combWords = Combine(OneOrMore(Word(alphas) | White(' ', max=1) + ~White()))
 
 # ArM dictionaries
 # check pyparser.Dict
@@ -48,10 +48,12 @@ form           = oneOf("An Au Aq Co He Ig Im Me Te Vi")
 value = Combine(Optional(oneOf("+ -")) + Word(nums))
 # score+xp: e.g. "5(20)"
 score = Combine(Word(nums)+Optional(oneOf("+2 +3")))
-xp    = Optional(Suppress("(")+nums+Suppress(")"))
+xp    = Optional(Suppress("(")+Word(nums)+Suppress(")"))
 
-# Combine requires the matching tokens to all be adjacent with no intervening whitespace
-ability        = combWords#Combine(words)
+
+# allow multi-word abilities, remove spaces which are before the score (end of ability name)
+# e.g.: "Artes Liberales 2" -> "['Artes Liberales', 2], not ['Artes Liberales ', 2]
+ability = Combine(OneOrMore(Word(alphas) | White(' ', max=1) + ~FollowedBy(Word(nums))))
 specialisation = Literal("(")+Word(alphas)+Literal(")")
 #Optional(Combine(Literal("(")+words+Literal(")")))
 
@@ -64,7 +66,7 @@ xp.setParseAction(lambda t:int(t[0]))
 # ArM parsing
 
 # A “Word” is a sequence of characters surrounded by white space or punctuation.
-
+# Combine requires the matching tokens to all be adjacent with no intervening whitespace
 
 
 ## ArM magus format
