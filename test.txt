@@ -1,3 +1,5 @@
 Aurulentus at Gauntlet
 Characteristics: Int +2, Per 0, Pre +3, Com +2, Str 0, Sta +1, Dex 0, Qik -2
 Abilities: Artes Liberales 1(5) (two words), Testing 2 (specialisation), Tryout 2 (test)
+Arts: Cr 11, In 1, Mu 0, Pe 0, Re 1; An 0, Aq 0, Au 0, Co 11, He 0, Ig 0, Im 0, Me 5, Te 0, Vi 5
+

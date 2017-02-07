@@ -79,7 +79,11 @@ abilities = Group(Suppress("Abilities: ")
                                         + specialisation))
                           ).setResultsName("Abilities")
 
-
+arts = Group(Suppress("Arts: ")
+                  + delimitedList(Group(technique+score))
+                  + ";"
+                  + delimitedList(Group(form+score))
+                  ).setResultsName("Arts")
 
 ## http://stackoverflow.com/questions/9995627/cant-get-pyparsing-dict-to-return-nested-dictionary
 ## nestedExpr: parser for nested lists
@@ -91,6 +95,7 @@ abilities = Group(Suppress("Abilities: ")
 parser = (name 
           + characteristics
           + abilities
+          + arts
 )
 
 
