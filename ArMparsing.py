@@ -35,6 +35,7 @@ with open("test.txt", "r") as file:
 # ease of use
 words     = OneOrMore(Word(alphas) | White(' ', max=1))
 abl_words = OneOrMore(Word(alphas+":") | White(' ', max=1))
+full_words = OneOrMore(Word(printables, excludeChars=';,') | White(' ', max=1))
 # http://stackoverflow.com/questions/26600333/pyparsing-whitespace-match-issues
 
 # ArM dictionaries
@@ -85,8 +86,20 @@ arts = Group(Suppress("Arts: ")
                   + delimitedList(Group(form+score))
                   ).setResultsName("Arts")
 
+# cannot deal with commas in the V/F, e.g. "True Love (Semira, his wife)"
+virtues_flaws = Group(Suppress("Virtues and Flaws: ")
+                  + Optional("The Gift"+Suppress(";"))# The Gift
+                  + Combine(full_words)# Social Status
+                  + Optional(Suppress(";"))
+                  + ZeroOrMore(delimitedList(
+                          Group(delimitedList(Combine(full_words))), delim=";")
+                          #+ Optional(";")
+                          )
+                  ).setResultsName("Virtues and Flaws")
+
 ## http://stackoverflow.com/questions/9995627/cant-get-pyparsing-dict-to-return-nested-dictionary
 ## nestedExpr: parser for nested lists
+
 
 
 
@@ -96,6 +109,7 @@ parser = (name
           + characteristics
           + abilities
           + arts
+          + virtues_flaws
 )
 
 

@@ -16,8 +16,7 @@ Wound Penalties: -1 (1-5), -3 (6-10), -5 (11-15), Incapacitated (16-20), Dead (2
 Abilities: Artes Liberales 1 (astronomy), Germany Lore 2 (covenant surroundings), Athletics 1 (running), Awareness 1 (searching), Carouse 1 (staying sober), Charm 2 (his wife), Code of Hermes 1 (apprentices), Concentration 2 (spell concentration), Etiquette 1 (nobility), Finesse 2 (precision), Folk Ken 1 (covenfolk), Guile 1 (lying to wife), High German 5 (Allemannisch), Intrigue 1 (gossip), Order of Hermes Lore 1 (5) (personalities), Latin 5 (Hermetic usage), Magic Lore 2+2 (Artemis), Magic Theory 4 (Corpus), Parma Magica 1 (Corpus), Penetration 1 (Corpus), Philosophiae 1 (moral philosophy), Profession: Scribe 1 (copying)
 Arts: Cr 11, In 1, Mu 0, Pe 0, Re 1; An 0, Aq 0, Au 0, Co 11, He 0, Ig 0, Im 0, Me 5, Te 0, Vi 5
 Powers:
-Oh Brother, Where Art Thou?, 0 points, Init –2, Corpus: Aurulentus can sense where his
-relatives are (direction and approximate distance) and their state of health. This power only works on those descended by blood from his great-great-grandfather, Alexander, which by the time of Aurulentus is a considerable number. This effect has no penetration and requires neither words nor gestures. (InCo Base 3, +3 Target: Bloodline (ArM5, page 92), +1 to determine state of health)
+Oh Brother, Where Art Thou?, 0 points, Init –2, Corpus: Aurulentus can sense where his relatives are (direction and approximate distance) and their state of health. This power only works on those descended by blood from his great-great-grandfather, Alexander, which by the time of Aurulentus is a considerable number. This effect has no penetration and requires neither words nor gestures. (InCo Base 3, +3 Target: Bloodline (ArM5, page 92), +1 to determine state of health)
 Twilight Scars: None
 Equipment: A set of tasteful clothes, and a wedding ring
 Encumbrance: 0
