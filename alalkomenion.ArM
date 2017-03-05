@@ -1,0 +1,41 @@
+Characteristics: Int +3, Per +1, Str +1, Sta +2, Pre -3, Com +1, Dex +0, Qui +1
+Size: 0
+Age: 42
+Decrepitude: 0
+Warping Score: 0 (0)
+Confidence Score: 1 (3)
+Virtues and Flaws: The Gift; Hermetic Magus; Blood and Bronze* (from Path of Stife: destroy things and extra damage with weapons), Eater of Sin* (from Path of Strife: Magic Sensitivity and use EW as Weapon skill), Mythic Blood (Athena); Affinity w/ Perdo, Affinity w/ Rego, Book Learner, Careful w/ Enigmatic Wisdom, Luck, Minor Magical Focus* (Weapons, from Mythic Blood), Puissant Enigmatic Wisdom, Skilled Parens, The Enigma*; Blatant Gift* (from Path of Strife), Optimistic, Plagued by Supernatural Entity; Cyclic Magic (Negative, Spring and Summer), Higher Purpose* (from Path of Strife: eat sin on behalf of house), Prudent Application of Violence* (from Mythic Blood), Susceptibility to Infernal Power, Visions, Warped Magic (Weapon/Shield clashing)
+Personality Traits: Optimistic +3, Prudent +2, Unpolitical +1, Loyal (Bellerophon) +3
+Reputations: None.
+Combat: 
+	Fist: Init +1, Attack +1, Defense +2, Damage +1  
+	Greatsword: Init +3, Attack +26*, Defense +7, Damage +10
+Soak: +4
+Fatigue Levels: OK, 0, -1, -3, -5, Unconscious
+Wound Penalties: -1 (1-5), -3 (6-10), -5 (11-15), Incapacitated (16+)
+Abilities: Artes Liberales (rhetoric) 2, Athletics (running) 2, Awareness (alertness) 2(5), Brawl (dodging) 1, Carouse (staying sober) 2, Concentration (spell concentration) 4(10), Dominion Lore (angels) 1(5), Enigmatic Wisdom (Path of Strife) 4(6)+2, Finesse (targeting) 1(5), Folk Ken (soldiers) 1, Greek (Boetic) 5, High German (Allemansch) 4, House Criamon Lore (Path of Strife) 2, Infernal Lore (demons) 1(5), Latin (hermetic usage) 4, Magic Theory (Rego) 5(6), Order of Hermes Lore (personalities) 1, Parma Magica (Mentem) 4, Penetration (Perdo) 2, Prof. Scribe (copying) 1, Stealth (hiding) 1, Survival (hills) 2, Swim (staying afloat) 2
+Arts: Cr 5, In 5, Mu 7, Pe 14(7), Re 15(4), An 5, Aq 5, Au 5, Co 5, He 5, Ig 5, Im 5(3), Me 5, Te 9, Vi 14(1)
+Powers: 
+	Athena Promachos, 0 points, Init +1, Terram: By uttering the words "Athena Promachos" (Athena, the front-line fighter) and making a shield-holding gesture, Alalkomenion can ward himself against mundane metal and wood. No weapons made of these substances can pierce his skin -- they stop just short of it. ReTe 5, +1 Conc, +2 metal, +1 Herbam requisite, +5 levels maintains concentration
+Spells Known: 
+	Agony of the Beast (PeAn 15)
+	Disguise of the Transformed Image (MuCo 15)
+	Dust to Dust (PeCo 15)
+	The Wound that Weeps (PeCo 15)
+	Full Levitate Slowly (ReCo 15)
+	Ward against Heat and Flames (ReIg 25)
+	Veil of Invisibility (PeIm 20)
+	Wizard's Sidestep (ReIm 10)
+	Trust of Childlike Faith (PeMe 10)
+	Loss of But a Moment's Memory (PeMe 15)
+	Unseen Porter (ReTe 10)
+	Crest of Earth Wave (ReTe 20)
+	House of Flying Dagger (ReTe 20)
+	Demon's Eternal Oblivion (PeVi 10)
+	Reduce Arc Con by One Step (R:Touch) (PeVi 10)
+	Wind of Mundane Silence (PeVi 25)
+	Circular Ward against Faeries (ReVi 10)
+	Circular Ward against Magical Creatures (ReVi 10)
+	Circular Ward against Demons (ReVi 15)
+	Maintaining the Demanding Spell (ReVi 15)
+	Suppressing the Wizard's Handiwork (ReVi 15)
