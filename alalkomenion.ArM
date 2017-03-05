@@ -9,14 +9,14 @@ Personality Traits: Optimistic +3, Prudent +2, Unpolitical +1, Loyal (Belleropho
 Reputations: None.
 Combat: 
 	Fist: Init +1, Attack +1, Defense +2, Damage +1  
-	Greatsword: Init +3, Attack +26*, Defense +7, Damage +10
+	Greatsword: Init +3, Attack +26, Defense +7, Damage +10
 Soak: +4
 Fatigue Levels: OK, 0, -1, -3, -5, Unconscious
 Wound Penalties: -1 (1-5), -3 (6-10), -5 (11-15), Incapacitated (16+)
-Abilities: Artes Liberales (rhetoric) 2, Athletics (running) 2, Awareness (alertness) 2(5), Brawl (dodging) 1, Carouse (staying sober) 2, Concentration (spell concentration) 4(10), Dominion Lore (angels) 1(5), Enigmatic Wisdom (Path of Strife) 4(6)+2, Finesse (targeting) 1(5), Folk Ken (soldiers) 1, Greek (Boetic) 5, High German (Allemansch) 4, House Criamon Lore (Path of Strife) 2, Infernal Lore (demons) 1(5), Latin (hermetic usage) 4, Magic Theory (Rego) 5(6), Order of Hermes Lore (personalities) 1, Parma Magica (Mentem) 4, Penetration (Perdo) 2, Prof. Scribe (copying) 1, Stealth (hiding) 1, Survival (hills) 2, Swim (staying afloat) 2
+Abilities: Artes Liberales 2 (rhetoric), Athletics 2 (running), Awareness 2(5) (alertness), Brawl 1 (dodging), Carouse 2 (staying sober), Concentration 4(10) (spell concentration), Dominion Lore 1(5) (angels), Enigmatic Wisdom 4(6)+2 (Path of Strife), Finesse 1(5) (targeting), Folk Ken 1 (soldiers), Greek 5 (Boetic), High German 4 (allemansch), House Criamon Lore 2 (Path of Strife), Infernal Lore 1(5) (demons), Latin 4 (hermetic usage), Magic Theory 5(6) (Rego), Order of Hermes Lore 1 (personalities), Parma Magica 4 (Mentem), Penetration 2 (Perdo), Profession: Scribe 1 (copying), Stealth 1 (hiding), Survival 2 (hills), Swim 2 (staying afloat)
 Arts: Cr 5, In 5, Mu 7, Pe 14(7), Re 15(4), An 5, Aq 5, Au 5, Co 5, He 5, Ig 5, Im 5(3), Me 5, Te 9, Vi 14(1)
 Powers: 
-	Athena Promachos, 0 points, Init +1, Terram: By uttering the words "Athena Promachos" (Athena, the front-line fighter) and making a shield-holding gesture, Alalkomenion can ward himself against mundane metal and wood. No weapons made of these substances can pierce his skin -- they stop just short of it. ReTe 5, +1 Conc, +2 metal, +1 Herbam requisite, +5 levels maintains concentration
+	Athena Promachos, 0 points, Init +1, Terram: By uttering the words "Athena Promachos" (Athena, the front-line fighter) and making a shield-holding gesture, Alalkomenion can ward himself against mundane metal and wood. No weapons made of these substances can pierce his skin -- they stop just short of it. (ReTe 5, +1 Conc, +2 metal, +1 Herbam requisite, +5 levels maintains concentration)
 Spells Known: 
 	Agony of the Beast (PeAn 15)
 	Disguise of the Transformed Image (MuCo 15)
@@ -32,7 +32,7 @@ Spells Known:
 	Crest of Earth Wave (ReTe 20)
 	House of Flying Dagger (ReTe 20)
 	Demon's Eternal Oblivion (PeVi 10)
-	Reduce Arc Con by One Step (R:Touch) (PeVi 10)
+	Reduce Arc Con by One Step at Range Touch (PeVi 10)
 	Wind of Mundane Silence (PeVi 25)
 	Circular Ward against Faeries (ReVi 10)
 	Circular Ward against Magical Creatures (ReVi 10)
